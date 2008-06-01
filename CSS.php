@@ -13,7 +13,7 @@
 
 if (!defined('MEDIAWIKI')) die('Not an entry point.');
 
-define('CSS_VERSION', '1.0.3, 2008-06-01');
+define('CSS_VERSION', '1.0.4, 2008-06-01');
 
 $wgCSSMagic                    = "css";
 $wgExtensionFunctions[]        = 'wfSetupCSS';
@@ -41,14 +41,16 @@ class CSS {
 		if (ereg('\\{', $css)) {
 
 			# Inline CSS
-			if ($wgRequest->getText('inline-css')) {
-				$wgOut->disable();
-				wfResetOutputBuffers();
-				header('Content-Type: text/css');
-				echo $css;
-			} else $url = $wgTitle->getLocalURL('inline-css=1');
-		}
-		elseif ($css{0} == '/') {
+			$css = htmlspecialchars(trim(Sanitizer::checkCss($css)));
+			$parser->mOutput->addHeadItem( <<<EOT
+<style type="text/css">
+/*<![CDATA[*/
+{$css}
+/*]]>*/
+</style>
+EOT
+        	);
+        } elseif ($css{0} == '/') {
 
 			# File
 			$url = $css;
