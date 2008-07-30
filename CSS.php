@@ -13,7 +13,7 @@
 
 if (!defined('MEDIAWIKI')) die('Not an entry point.');
 
-define('CSS_VERSION', '1.0.5, 2008-07-31');
+define('CSS_VERSION', '1.0.4, 2008-06-01');
 
 $wgCSSMagic                    = "css";
 $wgExtensionFunctions[]        = 'wfSetupCSS';
@@ -41,7 +41,7 @@ class CSS {
 		if (ereg('\\{', $css)) {
 
 			# Inline CSS
-			$css = trim(Sanitizer::checkCss($css));
+			$css = htmlspecialchars(trim(Sanitizer::checkCss($css)));
 			$parser->mOutput->addHeadItem( <<<EOT
 <style type="text/css">
 /*<![CDATA[*/
