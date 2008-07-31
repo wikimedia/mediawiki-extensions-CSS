@@ -41,12 +41,10 @@ class CSS {
 		if (ereg('\\{', $css)) {
 
 			# Inline CSS
-			$css = trim(Sanitizer::checkCss($css));
+			$css = htmlspecialchars(trim(Sanitizer::checkCss($css)));
 			$parser->mOutput->addHeadItem( <<<EOT
 <style type="text/css">
-/*<![CDATA[*/
 {$css}
-/*]]>*/
 </style>
 EOT
         	);
