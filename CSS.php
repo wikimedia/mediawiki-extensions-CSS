@@ -13,7 +13,7 @@
 
 if (!defined('MEDIAWIKI')) die('Not an entry point.');
 
-define('CSS_VERSION', '1.0.4, 2008-06-01');
+define('CSS_VERSION', '1.0.5, 2008-09-28');
 
 $wgCSSMagic                    = "css";
 $wgExtensionFunctions[]        = 'wfSetupCSS';
@@ -57,9 +57,12 @@ EOT
 
 		} else {
 
-			# Article
-			$url = Title::newFromText($css)->getLocalURL('action=raw&ctype=text/css');
-			$url = str_replace("&", "&amp;", $url);
+			# Article?
+			$title = Title::newFromText($css)
+			if (is_object($title)) {
+				$url = $tite->getLocalURL('action=raw&ctype=text/css');
+				$url = str_replace("&", "&amp;", $url);
+			}
 		}
 		if ($url) $wgOut->addScript("<link rel=\"stylesheet\" type=\"text/css\" href=\"$url\" />");
 		return '';
