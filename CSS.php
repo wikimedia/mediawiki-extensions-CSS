@@ -13,19 +13,23 @@
 
 if (!defined('MEDIAWIKI')) die('Not an entry point.');
 
-define('CSS_VERSION', '1.0.5, 2008-09-28');
+define('CSS_VERSION', '1.0.6, 2008-10-27');
 
 $wgCSSMagic                    = "css";
 $wgExtensionFunctions[]        = 'wfSetupCSS';
 $wgHooks['LanguageGetMagic'][] = 'wfCSSLanguageGetMagic';
 
 $wgExtensionCredits['parserhook'][] = array(
-	'name'        => 'CSS',
-	'author'      => '[http://www.organicdesign.co.nz/nad User:Nad]',
-	'description' => 'A parser-function for adding CSS files, article or inline rules to articles',
-	'url'         => 'http://www.mediawiki.org/wiki/Extension:CSS',
-	'version'     => CSS_VERSION
-	);
+	'name'           => 'CSS',
+	'author'         => '[http://www.organicdesign.co.nz/nad User:Nad]',
+	'description'    => 'A parser-function for adding CSS files, article or inline rules to articles',
+	'descriptionmsg' => 'css-desc',
+	'url'            => 'http://www.mediawiki.org/wiki/Extension:CSS',
+	'version'        => CSS_VERSION,
+);
+
+$dir = dirname( __FILE__ ) . '/';
+$wgExtensionMessagesFiles['CSS'] = $dir . 'CSS.i18n.php';
 
 class CSS {
 
@@ -49,8 +53,8 @@ class CSS {
 /*]]>*/
 </style>
 EOT
-        	);
-        } elseif ($css{0} == '/') {
+			);
+		} elseif ($css{0} == '/') {
 
 			# File
 			$url = $css;
@@ -88,4 +92,3 @@ function wfCSSLanguageGetMagic(&$magicWords, $langCode = 0) {
 	$magicWords[$wgCSSMagic] = array($langCode, $wgCSSMagic);
 	return true;
 }
-
