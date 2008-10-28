@@ -64,7 +64,7 @@ EOT
 			# Article?
 			$title = Title::newFromText($css);
 			if (is_object($title)) {
-				$url = $tite->getLocalURL('action=raw&ctype=text/css');
+				$url = $title->getLocalURL('action=raw&ctype=text/css');
 				$url = str_replace("&", "&amp;", $url);
 			}
 		}
