@@ -29,6 +29,13 @@ $messages['arz'] = array(
 	'css-desc' => 'دالة محلل تسمح بأنماط CSS أن تضمن فى صفحات معينة',
 );
 
+/** French (Français)
+ * @author IAlex
+ */
+$messages['fr'] = array(
+	'css-desc' => "Une fonction du parseur qui permet d'ajouter des feuilles de style dans certaines pages",
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
