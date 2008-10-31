@@ -43,6 +43,13 @@ $messages['gl'] = array(
 	'css-desc' => 'Unha función analítica que permite que sexan incluídas en páxinas específicas follas de estilo CSS',
 );
 
+/** Hebrew (עברית)
+ * @author Rotemliss
+ */
+$messages['he'] = array(
+	'css-desc' => 'הוראת תנאי המאפשרת הכללת גליונות עיצוב מסוג CSS בדפים מסוימים',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
@@ -62,6 +69,13 @@ $messages['lb'] = array(
  */
 $messages['nl'] = array(
 	'css-desc' => "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in aangegeven pagina's",
+);
+
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+$messages['sk'] = array(
+	'css-desc' => 'Funkcia syntaktického analyzátora, ktorá umožňuje vkladanie CSS do určitých stránok.',
 );
 
 /** Vietnamese (Tiếng Việt)
