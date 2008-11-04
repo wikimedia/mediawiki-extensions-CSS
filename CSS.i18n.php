@@ -29,6 +29,13 @@ $messages['arz'] = array(
 	'css-desc' => 'دالة محلل تسمح بأنماط CSS أن تضمن فى صفحات معينة',
 );
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+$messages['bg'] = array(
+	'css-desc' => 'Функция на парсера, която позволява вмъкването на CSS стилове в страниците',
+);
+
 /** French (Français)
  * @author IAlex
  */
