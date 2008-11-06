@@ -78,6 +78,13 @@ $messages['nl'] = array(
 	'css-desc' => "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in aangegeven pagina's",
 );
 
+/** Occitan (Occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'css-desc' => "Una foncion del parser que permet d'apondre de fuèlhs d'estil dins d'unas paginas",
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
