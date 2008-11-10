@@ -64,6 +64,13 @@ $messages['hsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kotraž dowola CSS stilowe předłohi do specifiskich stronow zapřijeć',
 );
 
+/** Kinaray-a (Kinaray-a)
+ * @author Joebertj
+ */
+$messages['krj'] = array(
+	'css-desc' => 'Sankga parser function nga nagatugot sa mga CSS stylesheets nga ma-idugang sa nga specific nga pahina',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
