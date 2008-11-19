@@ -36,6 +36,13 @@ $messages['bg'] = array(
 	'css-desc' => 'Функция на парсера, която позволява вмъкването на CSS стилове в страниците',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'css-desc' => 'Parserska funkcija koja omogućuje da se CSS stilovi uključe u određene stranice',
+);
+
 /** French (Français)
  * @author IAlex
  */
