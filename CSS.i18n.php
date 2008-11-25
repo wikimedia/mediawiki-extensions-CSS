@@ -71,6 +71,13 @@ $messages['hsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kotraž dowola CSS stilowe předłohi do specifiskich stronow zapřijeć',
 );
 
+/** Korean (한국어)
+ * @author Kwj2772
+ */
+$messages['ko'] = array(
+	'css-desc' => '특정 문서에 CSS를 추가할 수 있게 하는 파서 기능',
+);
+
 /** Kinaray-a (Kinaray-a)
  * @author Joebertj
  */
