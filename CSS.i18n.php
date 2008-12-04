@@ -106,11 +106,25 @@ $messages['oc'] = array(
 	'css-desc' => "Una foncion del parser que permet d'apondre de fuèlhs d'estil dins d'unas paginas",
 );
 
+/** Portuguese (Português)
+ * @author Waldir
+ */
+$messages['pt'] = array(
+	'css-desc' => 'Uma função do analisador (parser) que permite que folhas de estilo CSS sejam incluídas em páginas específicas',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
 	'css-desc' => 'Funkcia syntaktického analyzátora, ktorá umožňuje vkladanie CSS do určitých stránok.',
+);
+
+/** Swedish (Svenska)
+ * @author Micke
+ */
+$messages['sv'] = array(
+	'css-desc' => 'En parserfunktion som möjliggör inkluderande av CSS-stilmallar på specifika sidor',
 );
 
 /** Vietnamese (Tiếng Việt)
