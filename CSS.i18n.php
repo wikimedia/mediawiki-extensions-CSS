@@ -43,6 +43,13 @@ $messages['bs'] = array(
 	'css-desc' => 'Parserska funkcija koja omogućuje da se CSS stilovi uključe u određene stranice',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'css-desc' => 'Parserowa funkcija, kótaraž zmóžnja stilowe pśedłogi CSS do specifiskich bokow zapśěgnuś',
+);
+
 /** French (Français)
  * @author IAlex
  */
@@ -104,6 +111,13 @@ $messages['nl'] = array(
  */
 $messages['oc'] = array(
 	'css-desc' => "Una foncion del parser que permet d'apondre de fuèlhs d'estil dins d'unas paginas",
+);
+
+/** Polish (Polski)
+ * @author Leinad
+ */
+$messages['pl'] = array(
+	'css-desc' => 'Funkcja parsera pozwalająca dołączać arkusze stylów CSS do wskazanych stron',
 );
 
 /** Portuguese (Português)
