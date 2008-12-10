@@ -15,6 +15,13 @@ $messages['en'] = array(
 	'css-desc' => 'A parser function that allows CSS stylesheets to be included in specific pages',
 );
 
+/** Message documentation (Message documentation)
+ * @author Purodha
+ */
+$messages['qqq'] = array(
+	'css-desc' => 'Short description of the Css extension, shown on [[Special:Version]]',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
@@ -90,6 +97,13 @@ $messages['ko'] = array(
  */
 $messages['krj'] = array(
 	'css-desc' => 'Sankga parser function nga nagatugot sa mga CSS stylesheets nga ma-idugang sa nga specific nga pahina',
+);
+
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'css-desc' => 'En Paaser-Fungxjohn, för <i lang="en">Cascading Style Sheets (CSS)</i> en bestemmpte Sigge met opzenämme.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
