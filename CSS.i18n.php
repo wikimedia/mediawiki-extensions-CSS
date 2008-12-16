@@ -57,6 +57,13 @@ $messages['dsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kótaraž zmóžnja stilowe pśedłogi CSS do specifiskich bokow zapśěgnuś',
 );
 
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'css-desc' => 'Una función sintáctica que permite incluir hojas de estilo CSS en páginas específicas',
+);
+
 /** French (Français)
  * @author IAlex
  */
@@ -83,6 +90,13 @@ $messages['he'] = array(
  */
 $messages['hsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kotraž dowola CSS stilowe předłohi do specifiskich stronow zapřijeć',
+);
+
+/** Japanese (日本語)
+ * @author Fryed-peach
+ */
+$messages['ja'] = array(
+	'css-desc' => 'CSSスタイルシートを特定のページに埋め込めるようになるパーサー関数',
 );
 
 /** Korean (한국어)
@@ -139,6 +153,13 @@ $messages['pl'] = array(
  */
 $messages['pt'] = array(
 	'css-desc' => 'Uma função do analisador (parser) que permite que folhas de estilo CSS sejam incluídas em páginas específicas',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'css-desc' => "'Na funzione de parser ca conzende a le fogghie de stile CSS de essere ingluse jndr'à specifiche pàggene",
 );
 
 /** Slovak (Slovenčina)
