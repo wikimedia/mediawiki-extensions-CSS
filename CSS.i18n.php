@@ -50,6 +50,13 @@ $messages['bs'] = array(
 	'css-desc' => 'Parserska funkcija koja omogućuje da se CSS stilovi uključe u određene stranice',
 );
 
+/** German (Deutsch)
+ * @author ChrisiPK
+ */
+$messages['de'] = array(
+	'css-desc' => 'Eine Parser-Funktion, die es ermöglicht, CSS-Stylesheets in bestimmte Seiten einzubinden',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
