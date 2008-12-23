@@ -162,6 +162,13 @@ $messages['pt'] = array(
 	'css-desc' => 'Uma função do analisador (parser) que permite que folhas de estilo CSS sejam incluídas em páginas específicas',
 );
 
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'css-desc' => 'O funcţie de parsare care permite foilor de stiluri CSS să fie incluse în anumite pagini',
+);
+
 /** Tarandíne (Tarandíne)
  * @author Joetaras
  */
