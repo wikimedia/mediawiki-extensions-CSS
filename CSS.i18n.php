@@ -190,6 +190,13 @@ $messages['sv'] = array(
 	'css-desc' => 'En parserfunktion som möjliggör inkluderande av CSS-stilmallar på specifika sidor',
 );
 
+/** Vèneto (Vèneto)
+ * @author Candalua
+ */
+$messages['vec'] = array(
+	'css-desc' => 'Na funsion parser che permete de inclùdar i foj de stile CSS in pàxene speçifiche',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
