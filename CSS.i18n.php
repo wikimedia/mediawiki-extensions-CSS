@@ -50,6 +50,13 @@ $messages['bs'] = array(
 	'css-desc' => 'Parserska funkcija koja omogućuje da se CSS stilovi uključe u određene stranice',
 );
 
+/** Czech (Česky)
+ * @author Matěj Grabovský
+ */
+$messages['cs'] = array(
+	'css-desc' => 'Funkce syntaktického analyzátoru, která umožňuje vkládání CSS do určitých stránek.',
+);
+
 /** German (Deutsch)
  * @author ChrisiPK
  */
