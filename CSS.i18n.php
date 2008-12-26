@@ -141,6 +141,13 @@ $messages['nl'] = array(
 	'css-desc' => "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in aangegeven pagina's",
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
+ */
+$messages['nn'] = array(
+	'css-desc' => 'Ein parserfunksjon som gjer det mogleg å inkludera CSS-stilmalar på spesifikke sider',
+);
+
 /** Occitan (Occitan)
  * @author Cedric31
  */
