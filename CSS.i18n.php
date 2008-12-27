@@ -78,6 +78,13 @@ $messages['es'] = array(
 	'css-desc' => 'Una función sintáctica que permite incluir hojas de estilo CSS en páginas específicas',
 );
 
+/** Finnish (Suomi)
+ * @author Vililikku
+ */
+$messages['fi'] = array(
+	'css-desc' => 'Jäsennysfunktio, joka sallii CSS-tyylien sisällyttämisen tietyille sivuille.',
+);
+
 /** French (Français)
  * @author IAlex
  */
@@ -202,6 +209,13 @@ $messages['sk'] = array(
  */
 $messages['sv'] = array(
 	'css-desc' => 'En parserfunktion som möjliggör inkluderande av CSS-stilmallar på specifika sidor',
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'css-desc' => "Isang tungkuling pambanghay (''parser'') na nagpapahintulot sa estilo ng mga pilas ng CSS na mapabilang sa tinutukoy na mga pahina",
 );
 
 /** Vèneto (Vèneto)
