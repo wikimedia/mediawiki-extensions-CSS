@@ -232,3 +232,10 @@ $messages['vi'] = array(
 	'css-desc' => 'Hàm trong bộ phân tích để nhúng tập tin định kiểu CSS trong một trang nói riêng',
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Gaoxuewei
+ */
+$messages['zh-hans'] = array(
+	'css-desc' => '可让CSS样式表包含在特定页面的语法解析功能',
+);
+
