@@ -78,6 +78,13 @@ $messages['es'] = array(
 	'css-desc' => 'Una función sintáctica que permite incluir hojas de estilo CSS en páginas específicas',
 );
 
+/** Basque (Euskara)
+ * @author Theklan
+ */
+$messages['eu'] = array(
+	'css-desc' => 'CSS stilo orrialdeak biamentzen dituen parser funtzio bat sartzen du orrialde berezietan',
+);
+
 /** Finnish (Suomi)
  * @author Vililikku
  */
