@@ -169,6 +169,13 @@ $messages['nn'] = array(
 	'css-desc' => 'Ein parserfunksjon som gjer det mogleg å inkludera CSS-stilmalar på spesifikke sider',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Laaknor
+ */
+$messages['no'] = array(
+	'css-desc' => 'En parserfunksjon som gjør det mulig å inkludere CSS-stilark på spesifikke sider',
+);
+
 /** Occitan (Occitan)
  * @author Cedric31
  */
