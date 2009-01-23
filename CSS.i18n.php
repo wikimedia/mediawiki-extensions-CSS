@@ -106,6 +106,13 @@ $messages['gl'] = array(
 	'css-desc' => 'Unha función analítica que permite que sexan incluídas en páxinas específicas follas de estilo CSS',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'css-desc' => 'E Parser-Funktion, wu s megli macht, CSS-Stylesheet in bstimmti Syten yyzbinde',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  */
