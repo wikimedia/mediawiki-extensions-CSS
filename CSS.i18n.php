@@ -204,6 +204,13 @@ $messages['pt'] = array(
 	'css-desc' => 'Uma função do analisador (parser) que permite que folhas de estilo CSS sejam incluídas em páginas específicas',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'css-desc' => 'Uma função de análise (parser) que permite que folhas de estilo CSS sejam incluídas em páginas específicas',
+);
+
 /** Romanian (Română)
  * @author KlaudiuMihaila
  */
