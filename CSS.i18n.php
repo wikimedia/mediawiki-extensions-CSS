@@ -120,6 +120,13 @@ $messages['he'] = array(
 	'css-desc' => 'הוראת תנאי המאפשרת הכללת גליונות עיצוב מסוג CSS בדפים מסוימים',
 );
 
+/** Croatian (Hrvatski)
+ * @author SpeedyGonsales
+ */
+$messages['hr'] = array(
+	'css-desc' => 'Funkcija parsera koja omogućuje uključivanje CSS-a na određenim stranicama',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
