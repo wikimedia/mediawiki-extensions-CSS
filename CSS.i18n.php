@@ -94,9 +94,10 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author IAlex
+ * @author Verdy p
  */
 $messages['fr'] = array(
-	'css-desc' => "Une fonction du parseur qui permet d'ajouter des feuilles de style dans certaines pages",
+	'css-desc' => 'Une fonction du parseur qui permet d’inclure des feuilles de style dans certaines pages',
 );
 
 /** Galician (Galego)
