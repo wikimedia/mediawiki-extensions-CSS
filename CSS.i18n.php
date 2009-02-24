@@ -247,6 +247,13 @@ $messages['sv'] = array(
 	'css-desc' => 'En parserfunktion som möjliggör inkluderande av CSS-stilmallar på specifika sidor',
 );
 
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'css-desc' => 'కొన్ని ప్రత్యేకమైన పేజీలలో CSS శైలులని చేర్చడానికి అనుమతించే పార్సర్ సౌలభ్యం',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
