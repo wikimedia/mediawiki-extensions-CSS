@@ -135,6 +135,13 @@ $messages['hsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kotraž dowola CSS stilowe předłohi do specifiskich stronow zapřijeć',
 );
 
+/** Italian (Italiano)
+ * @author Pietrodn
+ */
+$messages['it'] = array(
+	'css-desc' => 'Una funzione del parser che consente di includere i fogli di stile CSS in pagine specifiche',
+);
+
 /** Japanese (日本語)
  * @author Fryed-peach
  */
