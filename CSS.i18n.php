@@ -135,6 +135,13 @@ $messages['hsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kotraž dowola CSS stilowe předłohi do specifiskich stronow zapřijeć',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'css-desc' => 'Un function del analysator syntactic que permitte includer folios de stilos CSS in paginas specific',
+);
+
 /** Italian (Italiano)
  * @author Pietrodn
  */
