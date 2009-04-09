@@ -39,7 +39,7 @@ class CSS {
 		}
 
 	function magicCss(&$parser, $css) {
-		global $wgOut, $wgRequest, $wgTitle;
+		global $wgOut, $wgRequest;
 		$parser->mOutput->mCacheTime = -1;
 		$url = false;
 		if (ereg('\\{', $css)) {
