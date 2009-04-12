@@ -114,6 +114,13 @@ $messages['gsw'] = array(
 	'css-desc' => 'E Parser-Funktion, wu s megli macht, CSS-Stylesheet in bstimmti Syten yyzbinde',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Dineshjk
+ */
+$messages['gu'] = array(
+	'css-desc' => 'પાર્સર વિધેય કે જે કોઇ ખાસ પાનાં પર CSS સ્ટાઇલશીટ મુકવા દે છે.',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  */
