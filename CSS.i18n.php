@@ -71,6 +71,13 @@ $messages['dsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kótaraž zmóžnja stilowe pśedłogi CSS do specifiskich bokow zapśěgnuś',
 );
 
+/** Greek (Ελληνικά)
+ * @author Omnipaedista
+ */
+$messages['el'] = array(
+	'css-desc' => 'Μία λεξιαναλυτική συνάρτηση που επιτρέπει σε CSS-stylesheets να συμπεριληφθούν σε συγκεκριμένες σελίδες',
+);
+
 /** Spanish (Español)
  * @author Sanbec
  */
@@ -259,6 +266,13 @@ $messages['roa-tara'] = array(
  */
 $messages['sk'] = array(
 	'css-desc' => 'Funkcia syntaktického analyzátora, ktorá umožňuje vkladanie CSS do určitých stránok.',
+);
+
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'css-desc' => 'Функција парсера која омогућује да се CSS стилови укључе у одређене стране',
 );
 
 /** Swedish (Svenska)
