@@ -61,7 +61,7 @@ $messages['cs'] = array(
  * @author ChrisiPK
  */
 $messages['de'] = array(
-	'css-desc' => 'Eine Parser-Funktion, die es ermöglicht, CSS-Stylesheets in bestimmte Seiten einzubinden',
+	'css-desc' => 'Eine Parser-Funktion, die es ermöglicht, CSS (Cascading Style Sheets) in bestimmte Seiten einzubinden',
 );
 
 /** Lower Sorbian (Dolnoserbski)
