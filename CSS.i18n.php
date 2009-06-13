@@ -262,6 +262,13 @@ $messages['roa-tara'] = array(
 	'css-desc' => "'Na funzione de parser ca conzende a le fogghie de stile CSS de essere ingluse jndr'à specifiche pàggene",
 );
 
+/** Russian (Русский)
+ * @author Ferrer
+ */
+$messages['ru'] = array(
+	'css-desc' => 'Функция парсера, позволяющая включать таблицы стилей CSS в определённые страницы',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
