@@ -36,6 +36,13 @@ $messages['arz'] = array(
 	'css-desc' => 'دالة محلل تسمح بأنماط CSS أن تضمن فى صفحات معينة',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'css-desc' => 'Функцыя парсэра, якая дазваляе ўключаць табліцы стыляў CSS ў пазначаныя старонкі',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
