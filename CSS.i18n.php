@@ -163,6 +163,13 @@ $messages['ia'] = array(
 	'css-desc' => 'Un function del analysator syntactic que permitte includer folios de stilos CSS in paginas specific',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'css-desc' => 'Fungsi parser yang berguna untuk mengijinkan CSS diikutkan di halaman tertentu',
+);
+
 /** Italian (Italiano)
  * @author Pietrodn
  */
