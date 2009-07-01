@@ -213,6 +213,13 @@ $messages['lb'] = array(
 	'css-desc' => 'Eng Parser-Funktioun déi et erlaabt CSS-Stilblieder a spzifesch Säiten anzebannen',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Aurora
+ */
+$messages['ms'] = array(
+	'css-desc' => 'Satu fungsi penghurai yang membenarkan lembaran gaya CSS dimasukkan ke laman tertentu',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
