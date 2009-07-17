@@ -255,6 +255,13 @@ $messages['pl'] = array(
 	'css-desc' => 'Funkcja parsera pozwalająca dołączać arkusze stylów CSS do wskazanych stron',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'css-desc' => "Na fonsion dël parser che a përmëtt d'anserì jë stylesheet CSS an drinta a pàgine spessìfiche",
+);
+
 /** Portuguese (Português)
  * @author Waldir
  */
