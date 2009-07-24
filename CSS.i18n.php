@@ -16,10 +16,11 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Fryed-peach
  * @author Purodha
  */
 $messages['qqq'] = array(
-	'css-desc' => 'Short description of the Css extension, shown on [[Special:Version]]',
+	'css-desc' => '{{desc}}',
 );
 
 /** Arabic (العربية)
@@ -140,6 +141,13 @@ $messages['gu'] = array(
  */
 $messages['he'] = array(
 	'css-desc' => 'הוראת תנאי המאפשרת הכללת גליונות עיצוב מסוג CSS בדפים מסוימים',
+);
+
+/** Hiligaynon (Ilonggo)
+ * @author Tagimata
+ */
+$messages['hil'] = array(
+	'css-desc' => 'Ang parser panksiyon nga naga pasugot sa CSS estilopahina nga gin-entra sa ensakto nga mga pahina',
 );
 
 /** Croatian (Hrvatski)
