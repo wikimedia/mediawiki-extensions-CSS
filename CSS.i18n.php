@@ -164,6 +164,13 @@ $messages['hsb'] = array(
 	'css-desc' => 'Parserowa funkcija, kotraž dowola CSS stilowe předłohi do specifiskich stronow zapřijeć',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'css-desc' => 'Parser function CSS stíluslapok hozzáadásához meghatározott oldalakon',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
