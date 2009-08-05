@@ -165,10 +165,11 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (Magyar)
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
-	'css-desc' => 'Parser function CSS stíluslapok hozzáadásához meghatározott oldalakon',
+	'css-desc' => 'Értelmezőfüggvény CSS stíluslapok beágyazásához meghatározott lapokon',
 );
 
 /** Interlingua (Interlingua)
