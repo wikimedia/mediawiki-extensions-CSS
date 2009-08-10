@@ -229,6 +229,13 @@ $messages['lb'] = array(
 	'css-desc' => 'Eng Parser-Funktioun déi et erlaabt CSS-Stilblieder a spzifesch Säiten anzebannen',
 );
 
+/** Limburgish (Limburgs)
+ * @author Pahles
+ */
+$messages['li'] = array(
+	'css-desc' => "'n Parserfunktie die 't mäögelik maak om CSS-stylesheets op te numme in aangegeve pagina's",
+);
+
 /** Malay (Bahasa Melayu)
  * @author Aurora
  */
@@ -325,6 +332,20 @@ $messages['sk'] = array(
  */
 $messages['sr-ec'] = array(
 	'css-desc' => 'Функција парсера која омогућује да се CSS стилови укључе у одређене стране',
+);
+
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'css-desc' => 'Funkcija parsera koja omogućuje da se CSS stilovi uključe u određene strane',
+);
+
+/** Sundanese (Basa Sunda)
+ * @author Irwangatot
+ */
+$messages['su'] = array(
+	'css-desc' => 'Fungsi parser anu kapaké pikeun ngijinan CSS dibawa dina kaca nu tangtu',
 );
 
 /** Swedish (Svenska)
