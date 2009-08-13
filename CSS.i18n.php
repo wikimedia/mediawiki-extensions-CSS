@@ -58,6 +58,13 @@ $messages['bs'] = array(
 	'css-desc' => 'Parserska funkcija koja omogućuje da se CSS stilovi uključe u određene stranice',
 );
 
+/** Catalan (Català)
+ * @author Paucabot
+ */
+$messages['ca'] = array(
+	'css-desc' => "Una funció d'anàlisi que permet incloure fulls d'estil CSS a pàgines concretes",
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
