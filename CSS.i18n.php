@@ -243,6 +243,13 @@ $messages['li'] = array(
 	'css-desc' => "'n Parserfunktie die 't mäögelik maak om CSS-stylesheets op te numme in aangegeve pagina's",
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'css-desc' => 'Парсер функција која дозволува прикажување на CSS стилски табли на одбрани страници',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Aurora
  */
