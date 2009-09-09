@@ -390,6 +390,13 @@ $messages['tl'] = array(
 	'css-desc' => "Isang tungkuling pambanghay (''parser'') na nagpapahintulot sa estilo ng mga pilas ng CSS na mapabilang sa tinutukoy na mga pahina",
 );
 
+/** Turkish (Türkçe)
+ * @author Srhat
+ */
+$messages['tr'] = array(
+	'css-desc' => 'Belirli sayfalara CSS biçem yapraklarının uygulanmasına olanak tanıyan bir derleyici işlevdir.',
+);
+
 /** Vèneto (Vèneto)
  * @author Candalua
  */
