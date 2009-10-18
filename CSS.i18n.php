@@ -264,6 +264,13 @@ $messages['ms'] = array(
 	'css-desc' => 'Satu fungsi penghurai yang membenarkan lembaran gaya CSS dimasukkan ke laman tertentu',
 );
 
+/** Nedersaksisch (Nedersaksisch)
+ * @author Servien
+ */
+$messages['nds-nl'] = array(
+	'css-desc' => "Een parserfunctie dee 't meugelijk maak um CSS-stylesheets op te nemen in an-egeven pagina's",
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
