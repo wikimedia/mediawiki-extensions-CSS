@@ -404,6 +404,13 @@ $messages['tr'] = array(
 	'css-desc' => 'Belirli sayfalara CSS biçem yapraklarının uygulanmasına olanak tanıyan bir derleyici işlevdir.',
 );
 
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'css-desc' => 'Функція парсеру, яка дозволяє включати таблиці стилів CSS в конкретні сторінки',
+);
+
 /** Vèneto (Vèneto)
  * @author Candalua
  */
