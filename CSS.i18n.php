@@ -23,6 +23,13 @@ $messages['qqq'] = array(
 	'css-desc' => '{{desc}}',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'css-desc' => "'n Ontleder-funksie wat dit moontlik maak om CSS-stylesheets in spesifieke bladsye in te sluit",
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
