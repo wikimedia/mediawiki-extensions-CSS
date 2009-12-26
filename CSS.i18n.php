@@ -439,3 +439,10 @@ $messages['zh-hans'] = array(
 	'css-desc' => '可让CSS样式表包含在特定页面的语法解析功能',
 );
 
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Liangent
+ */
+$messages['zh-hant'] = array(
+	'css-desc' => '可讓CSS樣式表包含在特定頁面的語法解析功能',
+);
+
