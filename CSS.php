@@ -23,7 +23,6 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'CSS',
 	'author'         => '[http://www.organicdesign.co.nz/nad User:Nad]',
-	'description'    => 'A parser-function for adding CSS files, article or inline rules to articles',
 	'descriptionmsg' => 'css-desc',
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:CSS',
 	'version'        => CSS_VERSION,
