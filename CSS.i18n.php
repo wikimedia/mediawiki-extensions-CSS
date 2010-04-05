@@ -369,6 +369,13 @@ $messages['sk'] = array(
 	'css-desc' => 'Funkcia syntaktického analyzátora, ktorá umožňuje vkladanie CSS do určitých stránok.',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'css-desc' => 'Funkcija razčlenjevalnika, ki omogoča vključitev slogovne predloge CSS v določene strani',
+);
+
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
