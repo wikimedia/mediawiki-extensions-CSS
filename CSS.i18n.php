@@ -236,7 +236,7 @@ $messages['krj'] = array(
 	'css-desc' => 'Sankga parser function nga nagatugot sa mga CSS stylesheets nga ma-idugang sa nga specific nga pahina',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(
