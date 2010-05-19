@@ -339,7 +339,7 @@ $messages['pt-br'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
-	'css-desc' => 'O funcţie de parsare care permite foilor de stiluri CSS să fie incluse în anumite pagini',
+	'css-desc' => 'O funcție de parsare care permite foilor de stiluri CSS să fie incluse în anumite pagini',
 );
 
 /** Tarandíne (Tarandíne)
