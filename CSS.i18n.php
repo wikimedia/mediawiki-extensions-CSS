@@ -30,6 +30,11 @@ $messages['af'] = array(
 	'css-desc' => "'n Ontleder-funksie wat dit moontlik maak om CSS-stylesheets in spesifieke bladsye in te sluit",
 );
 
+/** Gheg Albanian (Gegë) */
+$messages['aln'] = array(
+	'css-desc' => "Një funksion parser që lejon CSS stili për t'u përfshirë në faqet specifike",
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
