@@ -4,8 +4,8 @@
  *
  * See http://www.mediawiki.org/wiki/Extension:CSS for installation and usage details
  *
- * @package MediaWiki
- * @subpackage Extensions
+ * @file
+ * @ingroup Extensions
  * @author Aran Dunkley [http://www.organicdesign.co.nz/nad User:Nad]
  * @copyright © 2007 Aran Dunkley
  * @licence GNU General Public Licence 2.0 or later
