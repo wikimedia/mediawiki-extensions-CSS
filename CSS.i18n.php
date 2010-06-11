@@ -114,9 +114,10 @@ $messages['el'] = array(
 
 /** Esperanto (Esperanto)
  * @author Airon90
+ * @author ArnoLagrange
  */
 $messages['eo'] = array(
-	'css-desc' => 'Sintaksa analizilo kiu permesas enmeti CSS-stilfoliojn en specifaj paĝoj',
+	'css-desc' => 'Sintaksa analizilo kiu ebligas enmeti CSS-stilfoliojn en specifajn paĝojn',
 );
 
 /** Spanish (Español)
