@@ -270,6 +270,13 @@ $messages['li'] = array(
 	'css-desc' => "'n Parserfunktie die 't mäögelik maak om CSS-stylesheets op te numme in aangegeve pagina's",
 );
 
+/** Malagasy (Malagasy)
+ * @author Jagwar
+ */
+$messages['mg'] = array(
+	'css-desc' => "Tao parser ahafahana mampiditra CSS ao amin'ny pejy sasany manokana",
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */
