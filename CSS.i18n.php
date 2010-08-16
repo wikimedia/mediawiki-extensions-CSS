@@ -134,6 +134,13 @@ $messages['eu'] = array(
 	'css-desc' => 'CSS stilo orrialdeak biamentzen dituen parser funtzio bat sartzen du orrialde berezietan',
 );
 
+/** Persian (فارسی)
+ * @author Ebraminio
+ */
+$messages['fa'] = array(
+	'css-desc' => 'یک تابع تجزیه کننده که اجازه می‌دهد CSSها در صفحه‌های خاص اضافه شوند.',
+);
+
 /** Finnish (Suomi)
  * @author Vililikku
  */
