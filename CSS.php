@@ -33,7 +33,7 @@ $wgExtensionMessagesFiles['CSS'] = $dir . 'CSS.i18n.php';
 
 class CSS {
 
-	function CSS() {
+	function __construct() {
 		global $wgParser, $wgCSSMagic;
 		$wgParser->setFunctionHook($wgCSSMagic, array($this, 'magicCss'));
 		}
