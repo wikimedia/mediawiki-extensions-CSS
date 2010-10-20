@@ -7,13 +7,13 @@
  * @file
  * @ingroup Extensions
  * @author Aran Dunkley [http://www.organicdesign.co.nz/nad User:Nad]
- * @copyright © 2007 Aran Dunkley
+ * @copyright Â© 2007 Aran Dunkley
  * @licence GNU General Public Licence 2.0 or later
  */
 
-if (!defined('MEDIAWIKI')) die('Not an entry point.');
+if ( !defined( 'MEDIAWIKI') ) die('Not an entry point.' );
 
-define('CSS_VERSION', '1.0.6, 2008-10-27');
+define( 'CSS_VERSION', '1.0.7, 2010-10-20' );
 
 $wgCSSMagic                    = "css";
 $wgExtensionFunctions[]        = 'wfSetupCSS';
@@ -35,17 +35,17 @@ class CSS {
 
 	function __construct() {
 		global $wgParser, $wgCSSMagic;
-		$wgParser->setFunctionHook($wgCSSMagic, array($this, 'magicCss'));
+		$wgParser->setFunctionHook( $wgCSSMagic, array( $this, 'magicCss' ) );
 		}
 
-	function magicCss(&$parser, $css) {
+	function magicCss( &$parser, $css ) {
 		global $wgOut, $wgRequest;
 		$parser->mOutput->mCacheTime = -1;
 		$url = false;
-		if (ereg('\\{', $css)) {
+		if( preg_match( '|\\{|', $css ) ) {
 
 			# Inline CSS
-			$css = htmlspecialchars(trim(Sanitizer::checkCss($css)));
+			$css = htmlspecialchars( trim( Sanitizer::checkCss( $css ) ) );
 			$parser->mOutput->addHeadItem( <<<EOT
 <style type="text/css">
 /*<![CDATA[*/
@@ -54,7 +54,7 @@ class CSS {
 </style>
 EOT
 			);
-		} elseif ($css{0} == '/') {
+		} elseif ( $css{0} == '/' ) {
 
 			# File
 			$url = $css;
@@ -62,18 +62,17 @@ EOT
 		} else {
 
 			# Article?
-			$title = Title::newFromText($css);
-			if (is_object($title)) {
-				$url = $title->getLocalURL('action=raw&ctype=text/css');
-				$url = str_replace("&", "&amp;", $url);
+			$title = Title::newFromText( $css );
+			if( is_object( $title ) ) {
+				$url = $title->getLocalURL( 'action=raw&ctype=text/css' );
+				$url = str_replace( "&", "&amp;", $url );
 			}
 		}
-		if ($url) $wgOut->addScript("<link rel=\"stylesheet\" type=\"text/css\" href=\"$url\" />");
+
+		if( $url ) $wgOut->addScript( "<link rel=\"stylesheet\" type=\"text/css\" href=\"$url\" />" );
 		return '';
 	}
 
-	# Needed in some versions to prevent Special:Version from breaking
-	function __toString() { return 'CSS'; }
 }
 
 /**
@@ -84,11 +83,8 @@ function wfSetupCSS() {
 	$wgCSS = new CSS();
 }
 
-/**
- * Needed in MediaWiki >1.8.0 for magic word hooks to work properly
- */
-function wfCSSLanguageGetMagic(&$magicWords, $langCode = 0) {
+function wfCSSLanguageGetMagic( &$magicWords, $langCode = 0 ) {
 	global $wgCSSMagic;
-	$magicWords[$wgCSSMagic] = array($langCode, $wgCSSMagic);
+	$magicWords[$wgCSSMagic] = array( $langCode, $wgCSSMagic );
 	return true;
 }
