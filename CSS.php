@@ -7,7 +7,7 @@
  * @file
  * @ingroup Extensions
  * @author Aran Dunkley [http://www.organicdesign.co.nz/nad User:Nad]
- * @copyright Â© 2007 Aran Dunkley
+ * @copyright © 2007-2010 Aran Dunkley
  * @licence GNU General Public Licence 2.0 or later
  */
 
