@@ -153,7 +153,7 @@ $messages['fi'] = array(
  * @author Verdy p
  */
 $messages['fr'] = array(
-	'css-desc' => 'Une fonction du parseur qui permet d’inclure des feuilles de style dans certaines pages',
+	'css-desc' => 'Une fonction du parseur qui permet d’inclure des feuilles de style dans des pages spécifiques',
 );
 
 /** Galician (Galego)
