@@ -439,6 +439,13 @@ $messages['te'] = array(
 	'css-desc' => 'కొన్ని ప్రత్యేకమైన పేజీలలో CSS శైలులని చేర్చడానికి అనుమతించే పార్సర్ సౌలభ్యం',
 );
 
+/** Thai (ไทย)
+ * @author Octahedron80
+ */
+$messages['th'] = array(
+	'css-desc' => 'ฟังก์ชันแจงส่วนที่อนุญาตให้สไตล์ชีต CSS รวมอยู่ในหน้าที่เฉพาะเจาะจง',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
