@@ -49,6 +49,13 @@ $messages['arz'] = array(
 	'css-desc' => 'دالة محلل تسمح بأنماط CSS أن تضمن فى صفحات معينة',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'css-desc' => "Una función d'analís que permite incluir fueyes d'estilu CSS en páxines específiques",
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Jim-by
  */
