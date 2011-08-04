@@ -309,7 +309,7 @@ $messages['ms'] = array(
  * @author Servien
  */
 $messages['nds-nl'] = array(
-	'css-desc' => "Een parserfunksie die t meugelik maakt um CSS-stielblaojen op te nemen in an-egeven pagina's",
+	'css-desc' => "n Parserfunksie die t meugelik maakt um CSS-stielblaojen op te nemen in an-egeven pagina's",
 );
 
 /** Dutch (Nederlands)
