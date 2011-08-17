@@ -390,7 +390,7 @@ $messages['ru'] = array(
 	'css-desc' => 'Функция парсера, позволяющая включать таблицы стилей CSS в определённые страницы',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
