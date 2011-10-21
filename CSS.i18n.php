@@ -157,10 +157,11 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author IAlex
+ * @author Urhixidur
  * @author Verdy p
  */
 $messages['fr'] = array(
-	'css-desc' => 'Une fonction du parseur qui permet d’inclure des feuilles de style dans des pages spécifiques',
+	'css-desc' => 'Une fonction de l’analyseur syntaxique qui permet d’inclure des feuilles de style dans des pages spécifiques',
 );
 
 /** Galician (Galego)
