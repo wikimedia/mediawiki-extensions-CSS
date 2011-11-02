@@ -46,7 +46,7 @@ function wfCSSRender( &$parser, $css ) {
 		# "blue link" Article
 		$url = $title->getLocalURL( 'action=raw&ctype=text/css' );
 		$headItem = HTML::linkedStyle( $url );
-	} elseif ( $css{0} == '/' ) {
+	} elseif ( $css[0] == '/' ) {
 		# Regular file
 		$base = $wgCSSPath === false ? $wgScriptPath : $wgCSSPath;
 		$headItem = HTML::linkedStyle( $base . $css );
