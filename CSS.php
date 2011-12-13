@@ -33,7 +33,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name'           => 'CSS',
 	'author'         => array ( 'Aran Dunkley', 'Rusty Burchfield' ),
 	'descriptionmsg' => 'css-desc',
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:CSS',
+	'url'            => 'https://www.mediawiki.org/wiki/Extension:CSS',
 	'version'        => CSS_VERSION,
 );
 
