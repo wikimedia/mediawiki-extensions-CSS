@@ -330,7 +330,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Laaknor
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'css-desc' => 'En parserfunksjon som gjør det mulig å inkludere CSS-stilark på spesifikke sider',
 );
 
