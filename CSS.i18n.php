@@ -149,10 +149,11 @@ $messages['fa'] = array(
 );
 
 /** Finnish (Suomi)
+ * @author Crt
  * @author Vililikku
  */
 $messages['fi'] = array(
-	'css-desc' => 'Jäsennysfunktio, joka sallii CSS-tyylien sisällyttämisen tietyille sivuille.',
+	'css-desc' => 'Jäsennysfunktio, joka mahdollistaa CSS-tyylien sisällyttämisen tietyille sivuille.',
 );
 
 /** French (Français)
@@ -306,6 +307,13 @@ $messages['ms'] = array(
 	'css-desc' => 'Satu fungsi penghurai yang membenarkan lembaran gaya CSS dimasukkan ke laman tertentu',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Laaknor
+ */
+$messages['nb'] = array(
+	'css-desc' => 'En parserfunksjon som gjør det mulig å inkludere CSS-stilark på spesifikke sider',
+);
+
 /** Nedersaksisch (Nedersaksisch)
  * @author Servien
  */
@@ -325,13 +333,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'css-desc' => 'Ein parserfunksjon som gjer det mogleg å inkludera CSS-stilmalar på spesifikke sider',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Laaknor
- */
-$messages['nb'] = array(
-	'css-desc' => 'En parserfunksjon som gjør det mulig å inkludere CSS-stilark på spesifikke sider',
 );
 
 /** Occitan (Occitan)
