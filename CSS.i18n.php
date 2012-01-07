@@ -150,10 +150,11 @@ $messages['fa'] = array(
 
 /** Finnish (Suomi)
  * @author Crt
+ * @author Nike
  * @author Vililikku
  */
 $messages['fi'] = array(
-	'css-desc' => 'Jäsennysfunktio, joka mahdollistaa CSS-tyylien sisällyttämisen tietyille sivuille.',
+	'css-desc' => 'Jäsenninfunktio, joka mahdollistaa CSS-tyylien sisällyttämisen tietyille sivuille.',
 );
 
 /** French (Français)
