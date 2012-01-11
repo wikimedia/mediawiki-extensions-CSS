@@ -25,6 +25,7 @@ $wgCSSPath = false;
 $wgCSSIdentifier = 'css-extension';
 
 $wgHooks['ParserFirstCallInit'][] = 'wfCSSParserFirstCallInit';
+// FIXME: LanguageGetMagic is deprecated.
 $wgHooks['LanguageGetMagic'][] = 'wfCSSLanguageGetMagic';
 $wgHooks['RawPageViewBeforeOutput'][] = 'wfCSSRawPageViewBeforeOutput';
 
