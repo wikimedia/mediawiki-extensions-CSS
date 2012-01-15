@@ -16,17 +16,16 @@
  * @licence GNU General Public Licence 2.0 or later
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) die( 'Not an entry point.' );
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'Not an entry point.' );
+}
 
-define( 'CSS_VERSION', '3.0, 2011-11-18' );
+define( 'CSS_VERSION', '3.1, 2012-01-15' );
 
-$wgCSSMagic = 'css';
 $wgCSSPath = false;
 $wgCSSIdentifier = 'css-extension';
 
 $wgHooks['ParserFirstCallInit'][] = 'wfCSSParserFirstCallInit';
-// FIXME: LanguageGetMagic is deprecated.
-$wgHooks['LanguageGetMagic'][] = 'wfCSSLanguageGetMagic';
 $wgHooks['RawPageViewBeforeOutput'][] = 'wfCSSRawPageViewBeforeOutput';
 
 $wgExtensionCredits['parserhook'][] = array(
@@ -39,6 +38,7 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 $wgExtensionMessagesFiles['CSS'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.php';
+$wgExtensionMessagesFiles['CSSMagic'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.magic.php';
 
 $wgResourceModules['ext.CSS'] = array(
 	'scripts' => 'verifyCSSLoad.js',
@@ -110,19 +110,13 @@ INLINESCRIPT
 }
 
 function wfCSSParserFirstCallInit( $parser ) {
-	global $wgCSSMagic;
-	$parser->setFunctionHook( $wgCSSMagic, 'wfCSSRender' );
-	return true;
-}
-
-function wfCSSLanguageGetMagic( &$magicWords, $langCode = 0 ) {
-	global $wgCSSMagic;
-	$magicWords[$wgCSSMagic] = array( $langCode, $wgCSSMagic );
+	$parser->setFunctionHook( 'css', 'wfCSSRender' );
 	return true;
 }
 
 function wfCSSRawPageViewBeforeOutput( &$rawPage, &$text ) {
 	global $wgCSSIdentifier;
+
 	if ( $rawPage->getRequest()->getBool( $wgCSSIdentifier ) ) {
 		$text = Sanitizer::checkCss( $text );
 	}
