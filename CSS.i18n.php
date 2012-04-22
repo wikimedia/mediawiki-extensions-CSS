@@ -246,10 +246,11 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Shirayuki
  * @author Whym
  */
 $messages['ja'] = array(
-	'css-desc' => 'CSSスタイルシートを特定のページに埋め込めるようにするパーサー関数',
+	'css-desc' => '指定したページにCSSスタイルシートを埋め込めるようにするパーサー関数',
 );
 
 /** Korean (한국어)
