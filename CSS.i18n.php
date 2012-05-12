@@ -332,6 +332,7 @@ $messages['nl'] = array(
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'css-desc' => 'Ein parserfunksjon som gjer det mogleg å inkludera CSS-stilmalar på spesifikke sider',
