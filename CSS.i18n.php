@@ -56,7 +56,7 @@ $messages['ast'] = array(
 	'css-desc' => "Una función d'analís que permite incluir fueyes d'estilu CSS en páxines específiques",
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
@@ -105,7 +105,7 @@ $messages['de'] = array(
 	'css-desc' => 'Eine Parser-Funktion, die es ermöglicht, CSS (Cascading Style Sheets) in bestimmte Seiten einzubinden',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -166,7 +166,7 @@ $messages['fr'] = array(
 	'css-desc' => 'Une fonction de l’analyseur syntaxique qui permet d’inclure des feuilles de style dans des pages spécifiques',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -208,7 +208,7 @@ $messages['hr'] = array(
 	'css-desc' => 'Funkcija parsera koja omogućuje uključivanje CSS-a na određenim stranicama',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
