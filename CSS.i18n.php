@@ -309,7 +309,7 @@ $messages['ms'] = array(
 	'css-desc' => 'Satu fungsi penghurai yang membenarkan lembaran gaya CSS dimasukkan ke laman tertentu',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Laaknor
  */
 $messages['nb'] = array(
