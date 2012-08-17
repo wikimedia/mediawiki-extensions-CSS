@@ -309,6 +309,13 @@ $messages['ms'] = array(
 	'css-desc' => 'Satu fungsi penghurai yang membenarkan lembaran gaya CSS dimasukkan ke laman tertentu',
 );
 
+/** Maltese (Malti)
+ * @author Chrisportelli
+ */
+$messages['mt'] = array(
+	'css-desc' => "Funzjoni tal-''parser'' li tippermetti li tinkldui ''stylesheets'' CSS f'paġi speċifiċi",
+);
+
 /** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Laaknor
  */
