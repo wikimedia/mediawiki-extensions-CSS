@@ -56,7 +56,7 @@ $messages['ast'] = array(
 	'css-desc' => "Una función d'analís que permite incluir fueyes d'estilu CSS en páxines específiques",
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
@@ -316,7 +316,7 @@ $messages['mt'] = array(
 	'css-desc' => "Funzjoni tal-''parser'' li tippermetti li tinkldui ''stylesheets'' CSS f'paġi speċifiċi",
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Laaknor
  */
 $messages['nb'] = array(
@@ -337,7 +337,7 @@ $messages['nl'] = array(
 	'css-desc' => "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in aangegeven pagina's",
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -423,14 +423,14 @@ $messages['sl'] = array(
 	'css-desc' => 'Funkcija razčlenjevalnika, ki omogoča vključitev slogovne predloge CSS v določene strani',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'css-desc' => 'Функција парсера која омогућује да се CSS стилови укључе у одређене стране',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -507,14 +507,14 @@ $messages['yi'] = array(
 	'css-desc' => ' א פאַרזער פֿונקציאן וואס ערמעגלעכט אײַנשליסן CSS סטילבויגנס אין באַשטימטע בלעטער',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Gaoxuewei
  */
 $messages['zh-hans'] = array(
 	'css-desc' => '可让CSS样式表包含在特定页面的语法解析功能',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Liangent
  */
 $messages['zh-hant'] = array(
