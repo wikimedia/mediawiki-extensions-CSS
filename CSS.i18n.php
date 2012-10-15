@@ -56,6 +56,13 @@ $messages['ast'] = array(
 	'css-desc' => "Una función d'analís que permite incluir fueyes d'estilu CSS en páxines específiques",
 );
 
+/** Belarusian (беларуская)
+ * @author Чаховіч Уладзіслаў
+ */
+$messages['be'] = array(
+	'css-desc' => 'Функцыя парсера, якая дазваляе ўключаць табліцы стыляў CSS у вызначаныя старонкі',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Jim-by
  */
