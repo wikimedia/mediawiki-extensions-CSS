@@ -30,7 +30,8 @@ $messages['af'] = array(
 	'css-desc' => "'n Ontleder-funksie wat dit moontlik maak om CSS-stylesheets in spesifieke bladsye in te sluit",
 );
 
-/** Gheg Albanian (Gegë) */
+/** Gheg Albanian (Gegë)
+ */
 $messages['aln'] = array(
 	'css-desc' => "Një funksion parser që lejon CSS stili për t'u përfshirë në faqet specifike",
 );
@@ -534,4 +535,3 @@ $messages['zh-hant'] = array(
 $messages['zh-tw'] = array(
 	'css-desc' => '可讓CSS樣式表包含在特定頁面的語法解析功能',
 );
-
