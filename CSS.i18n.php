@@ -57,6 +57,13 @@ $messages['ast'] = array(
 	'css-desc' => "Una función d'analís que permite incluir fueyes d'estilu CSS en páxines específiques",
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'css-desc' => 'سی‌اِس‌اِس-لری خاص صحیفه‌لره قاتماغا ایجازه وئرن، بیر آیریشدیران فونکسیا',
+);
+
 /** Belarusian (беларуская)
  * @author Чаховіч Уладзіслаў
  */
