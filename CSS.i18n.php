@@ -18,9 +18,10 @@ $messages['en'] = array(
 /** Message documentation (Message documentation)
  * @author Fryed-peach
  * @author Purodha
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'css-desc' => '{{desc}}',
+	'css-desc' => '{{desc|name=CSS|url=http://www.mediawiki.org/wiki/Extension:CSS}}',
 );
 
 /** Afrikaans (Afrikaans)
