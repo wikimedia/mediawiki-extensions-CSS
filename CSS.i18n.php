@@ -339,7 +339,7 @@ $messages['nb'] = array(
 	'css-desc' => 'En parserfunksjon som gjør det mulig å inkludere CSS-stilark på spesifikke sider',
 );
 
-/** Nedersaksisch (Nedersaksisch)
+/** Nedersaksies (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
