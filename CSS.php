@@ -42,6 +42,7 @@ $wgExtensionMessagesFiles['CSSMagic'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.ma
 
 $wgResourceModules['ext.CSS'] = array(
 	'scripts' => 'verifyCSSLoad.js',
+	'position' => 'top',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'CSS',
 );
