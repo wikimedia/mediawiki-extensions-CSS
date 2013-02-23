@@ -311,6 +311,13 @@ $messages['mg'] = array(
 	'css-desc' => "Tao parser ahafahana mampiditra CSS ao amin'ny pejy sasany manokana",
 );
 
+/** Minangkabau (Baso Minangkabau)
+ * @author Iwan Novirion
+ */
+$messages['min'] = array(
+	'css-desc' => 'Fungsi parser untuak maijinkan CSS diikuikan di laman tatantu',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
