@@ -357,7 +357,7 @@ $messages['nds-nl'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'css-desc' => "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in aangegeven pagina's",
+	'css-desc' => "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in opgegeven pagina's",
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
