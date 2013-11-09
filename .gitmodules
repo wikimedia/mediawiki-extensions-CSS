@@ -1,0 +1,3 @@
+[submodule "PHP-CSS-Parser"]
+	path = PHP-CSS-Parser
+	url = https://github.com/sabberworm/PHP-CSS-Parser.git
