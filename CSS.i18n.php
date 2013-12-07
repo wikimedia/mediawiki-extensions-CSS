@@ -107,7 +107,7 @@ $messages['ca'] = array(
 	'css-desc' => "Una funció d'anàlisi que permet incloure fulls d'estil CSS a pàgines concretes",
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
