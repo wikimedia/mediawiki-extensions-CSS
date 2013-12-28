@@ -274,7 +274,7 @@ $messages['ja'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'css-desc' => '특정 문서에 CSS를 추가할 수 있게 하는 파서 함수',
+	'css-desc' => 'CSS 스타일시트를 특정 문서에 포함할 수 있는 파서 함수',
 );
 
 /** Kinaray-a (Kinaray-a)
