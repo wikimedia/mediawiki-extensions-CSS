@@ -433,6 +433,13 @@ $messages['sah'] = array(
 	'css-desc' => 'CSS истииллэрин таабылларын сорох сирэйдэргэ киллэрэри хааччыйар парсер функцията',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'css-desc' => 'A parser function that permits CSS stylesheets tae be incluided in speceefic pages',
+);
+
 /** Slovak (slovenčina)
  * @author Helix84
  */
