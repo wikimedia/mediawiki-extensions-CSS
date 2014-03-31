@@ -8,7 +8,6 @@
  *
  * @file
  * @ingroup Extensions
- * @version 2.0
  * @author Aran Dunkley [http://www.organicdesign.co.nz/nad User:Nad]
  * @author Rusty Burchfield
  * @copyright © 2007-2010 Aran Dunkley
@@ -20,7 +19,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-define( 'CSS_VERSION', '3.1, 2012-01-15' );
+define( 'CSS_VERSION', '3.3.0, 2014-03-31' );
 
 $wgCSSPath = false;
 $wgCSSIdentifier = 'css-extension';
@@ -37,6 +36,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version'        => CSS_VERSION,
 );
 
+$wgMessagesDirs['CSS'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['CSS'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.php';
 $wgExtensionMessagesFiles['CSSMagic'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.magic.php';
 
