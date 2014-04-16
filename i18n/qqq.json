@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Fryed-peach",
-            "Purodha",
-            "Shirayuki"
-        ]
-    },
-    "css-desc": "{{desc|name=CSS|url=http://www.mediawiki.org/wiki/Extension:CSS}}"
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Purodha",
+			"Shirayuki"
+		]
+	},
+	"css-desc": "{{desc|name=CSS|url=http://www.mediawiki.org/wiki/Extension:CSS}}"
 }

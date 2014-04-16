@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Harald Khan",
-            "Njardarlogar"
-        ]
-    },
-    "css-desc": "Ein parserfunksjon som gjer det mogleg å inkludera CSS-stilmalar på spesifikke sider"
+	"@metadata": {
+		"authors": [
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"css-desc": "Ein parserfunksjon som gjer det mogleg å inkludera CSS-stilmalar på spesifikke sider"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "McDutchie"
-        ]
-    },
-    "css-desc": "Un function del analysator syntactic que permitte includer folios de stilos CSS in paginas specific"
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"css-desc": "Un function del analysator syntactic que permitte includer folios de stilos CSS in paginas specific"
 }

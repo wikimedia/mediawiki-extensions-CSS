@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dbc334"
-        ]
-    },
-    "css-desc": "Funkcija razčlenjevalnika, ki omogoča vključitev slogovne predloge CSS v določene strani"
+	"@metadata": {
+		"authors": [
+			"Dbc334"
+		]
+	},
+	"css-desc": "Funkcija razčlenjevalnika, ki omogoča vključitev slogovne predloge CSS v določene strani"
 }

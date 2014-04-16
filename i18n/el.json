@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Omnipaedista"
-        ]
-    },
-    "css-desc": "Μία λεξιαναλυτική συνάρτηση που επιτρέπει σε CSS-stylesheets να συμπεριληφθούν σε συγκεκριμένες σελίδες"
+	"@metadata": {
+		"authors": [
+			"Omnipaedista"
+		]
+	},
+	"css-desc": "Μία λεξιαναλυτική συνάρτηση που επιτρέπει σε CSS-stylesheets να συμπεριληφθούν σε συγκεκριμένες σελίδες"
 }

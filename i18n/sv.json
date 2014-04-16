@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Micke"
-        ]
-    },
-    "css-desc": "En parserfunktion som möjliggör inkluderande av CSS-stilmallar på specifika sidor"
+	"@metadata": {
+		"authors": [
+			"Micke"
+		]
+	},
+	"css-desc": "En parserfunktion som möjliggör inkluderande av CSS-stilmallar på specifika sidor"
 }
