@@ -47,6 +47,12 @@ $wgResourceModules['ext.CSS'] = array(
 	'remoteExtPath' => 'CSS',
 );
 
+/**
+ * @param Parser $parser
+ * @param string $css
+ * @return string
+ * @throws MWException
+ */
 function wfCSSRender( &$parser, $css ) {
 	global $wgCSSPath, $wgStylePath, $wgCSSIdentifier;
 
@@ -110,11 +116,20 @@ INLINESCRIPT
 	return '';
 }
 
+/**
+ * @param Parser $parser
+ * @return bool
+ */
 function wfCSSParserFirstCallInit( $parser ) {
 	$parser->setFunctionHook( 'css', 'wfCSSRender' );
 	return true;
 }
 
+/**
+ * @param RawPage $rawPage
+ * @param string $text
+ * @return bool
+ */
 function wfCSSRawPageViewBeforeOutput( &$rawPage, &$text ) {
 	global $wgCSSIdentifier;
 
