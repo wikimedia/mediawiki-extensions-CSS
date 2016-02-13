@@ -65,7 +65,7 @@ function wfCSSRender( &$parser, $css ) {
 		# Article actually in the db
 		$params = "action=raw&ctype=text/css&$rawProtection";
 		$url = $title->getLocalURL( $params );
-		$headItem .= HTML::linkedStyle( $url );
+		$headItem .= Html::linkedStyle( $url );
 	} elseif ( $css[0] == '/' ) {
 		# Regular file
 		$base = $wgCSSPath === false ? $wgStylePath : $wgCSSPath;
@@ -73,7 +73,7 @@ function wfCSSRender( &$parser, $css ) {
 
 		# Verify the expanded URL is still using the base URL
 		if ( strpos( wfExpandUrl( $url ), wfExpandUrl( $base ) ) === 0 ) {
-			$headItem .= HTML::linkedStyle( $url );
+			$headItem .= Html::linkedStyle( $url );
 		} else {
 			$headItem .= '<!-- Invalid/malicious path  -->';
 		}
@@ -94,7 +94,7 @@ function wfCSSRender( &$parser, $css ) {
 		# Encode data URI and append link tag
 		$dataPrefix = 'data:text/css;charset=UTF-8;base64,';
 		$url = $dataPrefix . base64_encode( $css );
-		$headItem .= HTML::linkedStyle( $url );
+		$headItem .= Html::linkedStyle( $url );
 
 		# Calculate URI prefix to match link tag
 		$hrefPrefix = $dataPrefix . base64_encode( '#' . $canaryId );
@@ -102,7 +102,7 @@ function wfCSSRender( &$parser, $css ) {
 
 		# Add JS to verify the link tag loaded and fallback if needed
 		$parser->getOutput()->addModules( 'ext.CSS' );
-		$headItem .= HTML::inlineScript( <<<INLINESCRIPT
+		$headItem .= Html::inlineScript( <<<INLINESCRIPT
 jQuery( function( $ ) {
 	$( 'link[href^="$hrefPrefix"]' )
 		.cssExtensionDataURIFallback( '$canaryId', '$color' );
