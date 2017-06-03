@@ -19,8 +19,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-define( 'CSS_VERSION', '3.3.0, 2014-03-31' );
-
 $wgCSSPath = false;
 $wgCSSIdentifier = 'css-extension';
 
@@ -33,19 +31,12 @@ $wgExtensionCredits['parserhook'][] = array(
 	'author'         => array ( 'Aran Dunkley', 'Rusty Burchfield' ),
 	'descriptionmsg' => 'css-desc',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:CSS',
-	'version'        => CSS_VERSION,
+	'version'        => '3.4.0',
 );
 
 $wgMessagesDirs['CSS'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['CSS'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.php';
 $wgExtensionMessagesFiles['CSSMagic'] = dirname( __FILE__ ) . '/' . 'CSS.i18n.magic.php';
-
-$wgResourceModules['ext.CSS'] = array(
-	'scripts' => 'verifyCSSLoad.js',
-	'position' => 'top',
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'CSS',
-);
 
 /**
  * @param Parser $parser
@@ -78,37 +69,14 @@ function wfCSSRender( &$parser, $css ) {
 			$headItem .= '<!-- Invalid/malicious path  -->';
 		}
 	} else {
-		# Inline CSS; use data URI to prevent injection.  JavaScript
-		# will use a canary to verify load and will safely convert to
-		# style tag if load fails.
-
-		# Generate random CSS color that isn't black or white.
-		$color = dechex( mt_rand( 1, hexdec( 'fffffe' ) ) );
-		$color = str_pad( $color, 6, '0', STR_PAD_LEFT );
-
-		# Prepend canary CSS to sanitized user CSS
-		$canaryId = "$wgCSSIdentifier-canary-$color";
-		$canaryCSS = "#$canaryId{background:#$color !important}";
-		$css = $canaryCSS . Sanitizer::checkCss( $css );
+		# sanitized user CSS
+		$css = Sanitizer::checkCss( $css );
 
 		# Encode data URI and append link tag
 		$dataPrefix = 'data:text/css;charset=UTF-8;base64,';
 		$url = $dataPrefix . base64_encode( $css );
+
 		$headItem .= Html::linkedStyle( $url );
-
-		# Calculate URI prefix to match link tag
-		$hrefPrefix = $dataPrefix . base64_encode( '#' . $canaryId );
-		$hrefPrefix = substr( $url, 0, strlen( $hrefPrefix ) );
-
-		# Add JS to verify the link tag loaded and fallback if needed
-		$parser->getOutput()->addModules( 'ext.CSS' );
-		$headItem .= Html::inlineScript( <<<INLINESCRIPT
-jQuery( function( $ ) {
-	$( 'link[href^="$hrefPrefix"]' )
-		.cssExtensionDataURIFallback( '$canaryId', '$color' );
-} );
-INLINESCRIPT
-		);
 	}
 
 	$headItem .= '<!-- End Extension:CSS -->';
