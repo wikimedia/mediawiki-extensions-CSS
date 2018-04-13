@@ -12,7 +12,7 @@
  * @author Rusty Burchfield
  * @copyright © 2007-2010 Aran Dunkley
  * @copyright © 2011 Rusty Burchfield
- * @licence GNU General Public Licence 2.0 or later
+ * @license GPL-2.0-or-later
  */
 
 class CSS {
