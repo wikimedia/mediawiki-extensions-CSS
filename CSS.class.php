@@ -18,7 +18,7 @@
 class CSS {
 
 	/**
-	 * @param Parser $parser
+	 * @param Parser &$parser
 	 * @param string $css
 	 * @return string
 	 */
@@ -72,8 +72,8 @@ class CSS {
 	}
 
 	/**
-	 * @param RawPage $rawPage
-	 * @param string $text
+	 * @param RawPage &$rawPage
+	 * @param string &$text
 	 * @return bool true
 	 */
 	public static function onRawPageViewBeforeOutput( &$rawPage, &$text ) {
