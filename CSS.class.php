@@ -26,6 +26,9 @@ class CSS {
 		global $wgCSSPath, $wgStylePath, $wgCSSIdentifier;
 
 		$css = trim( $css );
+		if ( !$css ) {
+			return '';
+		}
 		$title = Title::newFromText( $css );
 		$rawProtection = "$wgCSSIdentifier=1";
 		$headItem = '<!-- Begin Extension:CSS -->';
