@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Srhat"
+			"Srhat",
+			"MuratTheTurkish"
 		]
 	},
-	"css-desc": "Belirli sayfalara CSS biçem yapraklarının uygulanmasına olanak tanıyan bir derleyici işlevdir."
+	"css-desc": "CSS stil sayfalarının belirli sayfalara dahil edilmesine izin veren bir ayrıştırıcı işlevi"
 }
