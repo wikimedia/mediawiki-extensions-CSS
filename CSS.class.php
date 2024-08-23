@@ -41,7 +41,15 @@ class CSS {
 		} elseif ( $css[0] == '/' ) {
 			# Regular file
 			$base = $wgCSSPath === false ? $wgStylePath : $wgCSSPath;
-			$url = wfAppendQuery( $base . $css, $rawProtection );
+			// The replacement for \ to / is to workaround a path traversal,
+			// per T369486.
+			// TODO: Implement a proper URL parser. There may be more niche URL
+			// shenanigans one could get up to that MediaWiki's parser does not
+			// handle, but which the browser does. The most surefire way to
+			// guarantee that no tomfoolery happens is to 100% replicate what
+			// the browser does and not only like 90% of it.
+			$path = str_replace( '\\', '/', $css );
+			$url = wfAppendQuery( $base . $path, $rawProtection );
 
 			# Verify the expanded URL is still using the base URL
 			if ( strpos( wfExpandUrl( $url ), wfExpandUrl( $base ) ) === 0 ) {
