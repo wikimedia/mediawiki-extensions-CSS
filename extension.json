@@ -10,22 +10,28 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.31.0"
+		"MediaWiki": ">= 1.35.0"
 	},
+	"load_composer_autoloader": true,
 	"ExtensionMessagesFiles": {
-		"CSSMagic": "CSS.i18n.magic.php"
+		"CSSMagic": "includes/CSS.i18n.magic.php"
 	},
 	"MessagesDirs": {
 		"CSS": [
 			"i18n"
 		]
 	},
-	"AutoloadClasses": {
-		"CSS": "CSS.class.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\CSS\\": "includes/"
+	},
+	"HookHandlers": {
+		"CSSHooks": {
+			"class": "MediaWiki\\Extension\\CSS\\Hooks"
+		}
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "CSS::onParserFirstCallInit",
-		"RawPageViewBeforeOutput": "CSS::onRawPageViewBeforeOutput"
+		"ParserFirstCallInit": "CSSHooks",
+		"RawPageViewBeforeOutput": "CSSHooks"
 	},
 	"config": {
 		"CSSPath": false,
