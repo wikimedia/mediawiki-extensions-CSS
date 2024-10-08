@@ -47,7 +47,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		// This function is based on TemplateStyles's Hooks::getSanitizer():
 		// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/TemplateStyles/+/refs/heads/master/includes/Hooks.php
 		if ( self::$sanitizer ) {
-			return $sanitizer;
+			return self::$sanitizer;
 		}
 
 		$matcherFactory = new CSSMatcherFactory;
