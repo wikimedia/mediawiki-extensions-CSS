@@ -17,6 +17,7 @@
 
 namespace MediaWiki\Extension\CSS;
 
+use Config;
 use MediaWiki\Extension\CSS\Hooks\HookRunner;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\RawPageViewBeforeOutputHook;
@@ -42,11 +43,14 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	/** @var StylesheetSanitizer */
 	private static $sanitizer;
 
+	private Config $config;
 	private HookContainer $hookContainer;
 
 	public function __construct(
+		Config $config,
 		HookContainer $hookContainer
 	) {
+		$this->config = $config;
 		$this->hookContainer = $hookContainer;
 	}
 
@@ -130,14 +134,13 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	 * @return string
 	 */
 	public function cssRender( &$parser, $css ) {
-		global $wgCSSPath, $wgStylePath, $wgCSSIdentifier;
-
 		$css = trim( $css );
 		if ( $css === '' ) {
 			return '';
 		}
 		$title = Title::newFromText( $css );
-		$rawProtection = "$wgCSSIdentifier=1";
+		$identifier = $this->config->get( 'CSSIdentifier' );
+		$rawProtection = "$identifier=1";
 		$headItem = '<!-- Begin Extension:CSS -->';
 
 		if ( is_object( $title ) && $title->exists() ) {
@@ -147,7 +150,9 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			$headItem .= Html::linkedStyle( $url );
 		} elseif ( $css[0] == '/' ) {
 			# Regular file
-			$base = $wgCSSPath === false ? $wgStylePath : $wgCSSPath;
+			$base = $this->config->get( 'CSSPath' ) === false ?
+				$this->config->get( 'StylePath' ) :
+				$this->config->get( 'CSSPath' );
 			// The replacement for \ to / is to workaround a path traversal,
 			// per T369486.
 			// TODO: Implement a proper URL parser. There may be more niche URL
@@ -194,9 +199,9 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	 * @return bool|void True or no return value to continue or false to abort
 	 */
 	public function onRawPageViewBeforeOutput( $rawPage, &$text ) {
-		global $wgCSSIdentifier;
+		$identifier = $this->config->get( 'CSSIdentifier' );
 
-		if ( $rawPage->getRequest()->getBool( $wgCSSIdentifier ) ) {
+		if ( $rawPage->getRequest()->getBool( $identifier ) ) {
 			$text = $this->sanitizeCSS( $text );
 		}
 	}

@@ -28,6 +28,7 @@
 		"CSSHooks": {
 			"class": "MediaWiki\\Extension\\CSS\\Hooks",
 			"services": [
+				"MainConfig",
 				"HookContainer"
 			]
 		}
