@@ -40,7 +40,7 @@
 		"RawPageViewBeforeOutput": "CSSHooks"
 	},
 	"config": {
-		"CSSPath": false,
+		"CSSPath": null,
 		"CSSIdentifier": "css-extension"
 	},
 	"manifest_version": 1

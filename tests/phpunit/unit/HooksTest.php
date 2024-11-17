@@ -55,7 +55,7 @@ class HooksTest extends MediaWikiUnitTestCase {
 		$hooks = new Hooks(
 			new HashConfig( [
 				'CSSIdentifier' => 'css-extension',
-				'CSSPath' => false,
+				'CSSPath' => null,
 				'StylePath' => '/w/skins',
 			] ),
 			$this->createNoOpMock( HookContainer::class ),

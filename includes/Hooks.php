@@ -148,9 +148,8 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			$headItem .= Html::linkedStyle( $url );
 		} elseif ( $css[0] === '/' && !( strlen( $css ) >= 2 && $css[1] === '*' ) ) {
 			# Regular file
-			$base = $this->config->get( 'CSSPath' ) === false ?
-				$this->config->get( MainConfigNames::StylePath ) :
-				$this->config->get( 'CSSPath' );
+			$base = $this->config->get( 'CSSPath' ) ??
+				$this->config->get( MainConfigNames::StylePath );
 			// The URL decoding and replacement for \ to / are to workaround a
 			// path traversal vulnerability (see T369486 and T401526).
 			// TODO: Implement a proper URL parser. There may be more niche URL
