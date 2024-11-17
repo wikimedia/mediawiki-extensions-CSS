@@ -24,6 +24,7 @@ use MediaWiki\Hook\RawPageViewBeforeOutputHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
 use MediaWiki\Title\Title;
+use MediaWiki\Utils\UrlUtils;
 use Parser;
 use RawAction;
 use Wikimedia\CSS\Parser\Parser as CSSParser;
@@ -44,13 +45,16 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
 	private Config $config;
 	private HookContainer $hookContainer;
+	private UrlUtils $urlUtils;
 
 	public function __construct(
 		Config $config,
-		HookContainer $hookContainer
+		HookContainer $hookContainer,
+		UrlUtils $urlUtils
 	) {
 		$this->config = $config;
 		$this->hookContainer = $hookContainer;
+		$this->urlUtils = $urlUtils;
 	}
 
 	private function getSanitizer(): StylesheetSanitizer {
@@ -151,7 +155,9 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			$url = wfAppendQuery( $base . $path, $rawProtection );
 
 			# Verify the expanded URL is still using the base URL
-			if ( strpos( wfExpandUrl( $url ), wfExpandUrl( $base ) ) === 0 ) {
+			$expandedUrl = $this->urlUtils->expand( $url );
+			$expandedBase = $this->urlUtils->expand( $base );
+			if ( $expandedUrl && $expandedBase && strpos( $expandedUrl, $expandedBase ) === 0 ) {
 				$headItem .= Html::linkedStyle( $url );
 			} else {
 				$headItem .= '<!-- Invalid/malicious path  -->';
