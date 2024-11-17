@@ -60,35 +60,33 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	private function getSanitizer() {
 		// This function is based on TemplateStyles's Hooks::getSanitizer():
 		// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/TemplateStyles/+/refs/heads/master/includes/Hooks.php
-		if ( self::$sanitizer ) {
-			return self::$sanitizer;
+		if ( !self::$sanitizer ) {
+			$matcherFactory = new CSSMatcherFactory;
+
+			$propertySanitizer = new StylePropertySanitizer( $matcherFactory );
+			$hookRunner = new HookRunner( $this->hookContainer );
+			$hookRunner->onCSSPropertySanitizer( $propertySanitizer, $matcherFactory );
+
+			$ruleSanitizers = [
+				'style' => new StyleRuleSanitizer( $matcherFactory->cssSelectorList(), $propertySanitizer ),
+				'@font-face' => new FontFaceAtRuleSanitizer( $matcherFactory ),
+				'@keyframes' => new KeyframesAtRuleSanitizer( $matcherFactory, $propertySanitizer ),
+				'@page' => new PageAtRuleSanitizer( $matcherFactory, $propertySanitizer ),
+				'@media' => new MediaAtRuleSanitizer( $matcherFactory->cssMediaQueryList() ),
+				'@supports' => new SupportsAtRuleSanitizer( $matcherFactory, [
+					'declarationSanitizer' => $propertySanitizer,
+				] ),
+
+				// Do not include @import due to lack of proper security measures
+				'@namespace' => new NamespaceAtRuleSanitizer( $matcherFactory ),
+			];
+
+			$ruleSanitizers['@media']->setRuleSanitizers( $ruleSanitizers );
+			$ruleSanitizers['@supports']->setRuleSanitizers( $ruleSanitizers );
+
+			self::$sanitizer = new StylesheetSanitizer( $ruleSanitizers );
+			$hookRunner->onCSSStylesheetSanitizer( self::$sanitizer, $propertySanitizer, $matcherFactory );
 		}
-
-		$matcherFactory = new CSSMatcherFactory;
-
-		$propertySanitizer = new StylePropertySanitizer( $matcherFactory );
-		$hookRunner = new HookRunner( $this->hookContainer );
-		$hookRunner->onCSSPropertySanitizer( $propertySanitizer, $matcherFactory );
-
-		$ruleSanitizers = [
-			'style' => new StyleRuleSanitizer( $matcherFactory->cssSelectorList(), $propertySanitizer ),
-			'@font-face' => new FontFaceAtRuleSanitizer( $matcherFactory ),
-			'@keyframes' => new KeyframesAtRuleSanitizer( $matcherFactory, $propertySanitizer ),
-			'@page' => new PageAtRuleSanitizer( $matcherFactory, $propertySanitizer ),
-			'@media' => new MediaAtRuleSanitizer( $matcherFactory->cssMediaQueryList() ),
-			'@supports' => new SupportsAtRuleSanitizer( $matcherFactory, [
-				'declarationSanitizer' => $propertySanitizer,
-			] ),
-
-			// Do not include @import due to lack of proper security measures
-			'@namespace' => new NamespaceAtRuleSanitizer( $matcherFactory ),
-		];
-
-		$ruleSanitizers['@media']->setRuleSanitizers( $ruleSanitizers );
-		$ruleSanitizers['@supports']->setRuleSanitizers( $ruleSanitizers );
-
-		self::$sanitizer = new StylesheetSanitizer( $ruleSanitizers );
-		$hookRunner->onCSSStylesheetSanitizer( self::$sanitizer, $propertySanitizer, $matcherFactory );
 		return self::$sanitizer;
 	}
 
