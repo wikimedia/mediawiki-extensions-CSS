@@ -23,6 +23,7 @@ use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\RawPageViewBeforeOutputHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
+use MediaWiki\MainConfigNames;
 use MediaWiki\Utils\UrlUtils;
 use Parser;
 use RawAction;
@@ -148,7 +149,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		} elseif ( $css[0] === '/' ) {
 			# Regular file
 			$base = $this->config->get( 'CSSPath' ) === false ?
-				$this->config->get( 'StylePath' ) :
+				$this->config->get( MainConfigNames::StylePath ) :
 				$this->config->get( 'CSSPath' );
 			// The replacement for \ to / is to workaround a path traversal,
 			// per T369486.
