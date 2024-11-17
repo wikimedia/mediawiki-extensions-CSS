@@ -135,7 +135,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			$params = "action=raw&ctype=text/css&$rawProtection";
 			$url = $title->getLocalURL( $params );
 			$headItem .= Html::linkedStyle( $url );
-		} elseif ( $css[0] == '/' ) {
+		} elseif ( $css[0] === '/' ) {
 			# Regular file
 			$base = $this->config->get( 'CSSPath' ) === false ?
 				$this->config->get( 'StylePath' ) :
