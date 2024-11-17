@@ -23,6 +23,8 @@ use MediaWiki\Hook\RawPageViewBeforeOutputHook;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Parser;
+use RawAction;
 use Wikimedia\CSS\Parser\Parser as CSSParser;
 use Wikimedia\CSS\Sanitizer\FontFaceAtRuleSanitizer;
 use Wikimedia\CSS\Sanitizer\KeyframesAtRuleSanitizer;
@@ -37,7 +39,7 @@ use Wikimedia\CSS\Util as CSSUtil;
 
 class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
-	/** @var Sanitizer */
+	/** @var StylesheetSanitizer */
 	private static $sanitizer;
 
 	/**
@@ -172,17 +174,16 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
 	/**
 	 * @param Parser $parser
-	 * @return bool true
+	 * @return bool|void True or no return value to continue or false to abort
 	 */
 	public function onParserFirstCallInit( $parser ) {
 		$parser->setFunctionHook( 'css', [ $this, 'cssRender' ] );
-		return true;
 	}
 
 	/**
-	 * @param RawPage $rawPage
+	 * @param RawAction $rawPage
 	 * @param string &$text
-	 * @return bool true
+	 * @return bool|void True or no return value to continue or false to abort
 	 */
 	public function onRawPageViewBeforeOutput( $rawPage, &$text ) {
 		global $wgCSSIdentifier;
@@ -190,6 +191,5 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		if ( $rawPage->getRequest()->getBool( $wgCSSIdentifier ) ) {
 			$text = self::sanitizeCSS( $text );
 		}
-		return true;
 	}
 }
