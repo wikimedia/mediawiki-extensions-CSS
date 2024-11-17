@@ -26,7 +26,10 @@
 	},
 	"HookHandlers": {
 		"CSSHooks": {
-			"class": "MediaWiki\\Extension\\CSS\\Hooks"
+			"class": "MediaWiki\\Extension\\CSS\\Hooks",
+			"services": [
+				"HookContainer"
+			]
 		}
 	},
 	"Hooks": {

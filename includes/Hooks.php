@@ -20,8 +20,8 @@ namespace MediaWiki\Extension\CSS;
 use MediaWiki\Extension\CSS\Hooks\HookRunner;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\RawPageViewBeforeOutputHook;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use Parser;
 use RawAction;
@@ -42,10 +42,18 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	/** @var StylesheetSanitizer */
 	private static $sanitizer;
 
+	private HookContainer $hookContainer;
+
+	public function __construct(
+		HookContainer $hookContainer
+	) {
+		$this->hookContainer = $hookContainer;
+	}
+
 	/**
 	 * @return StylesheetSanitizer
 	 */
-	protected static function getSanitizer() {
+	private function getSanitizer() {
 		// This function is based on TemplateStyles's Hooks::getSanitizer():
 		// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/TemplateStyles/+/refs/heads/master/includes/Hooks.php
 		if ( self::$sanitizer ) {
@@ -55,7 +63,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		$matcherFactory = new CSSMatcherFactory;
 
 		$propertySanitizer = new StylePropertySanitizer( $matcherFactory );
-		$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
+		$hookRunner = new HookRunner( $this->hookContainer );
 		$hookRunner->onCSSPropertySanitizer( $propertySanitizer, $matcherFactory );
 
 		$ruleSanitizers = [
@@ -85,7 +93,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	 * @param string $css
 	 * @return string
 	 */
-	protected static function sanitizeCSS( $css ) {
+	private function sanitizeCSS( $css ) {
 		// Errors are reported vaguely since the previous implementation was also vague, and since doing
 		// so could help avoid an amplification DoS (T368594#10146978). This can be revisited though.
 		// This also fails silently rather than loudly, supposedly partly for consistency with the former
@@ -97,7 +105,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			return '/* css-sanitizer failed to parse CSS */';
 		}
 
-		$sanitizer = self::getSanitizer();
+		$sanitizer = $this->getSanitizer();
 		$sanitizer->clearSanitizationErrors();
 		$css = $sanitizer->sanitize( $css );
 		if ( $sanitizer->getSanitizationErrors() ) {
@@ -121,7 +129,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	 * @param string $css
 	 * @return string
 	 */
-	public static function cssRender( &$parser, $css ) {
+	public function cssRender( &$parser, $css ) {
 		global $wgCSSPath, $wgStylePath, $wgCSSIdentifier;
 
 		$css = trim( $css );
@@ -158,7 +166,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			}
 		} else {
 			# sanitized user CSS
-			$css = self::sanitizeCSS( $css );
+			$css = $this->sanitizeCSS( $css );
 
 			# Encode data URI and append link tag
 			$dataPrefix = 'data:text/css;charset=UTF-8;base64,';
@@ -189,7 +197,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		global $wgCSSIdentifier;
 
 		if ( $rawPage->getRequest()->getBool( $wgCSSIdentifier ) ) {
-			$text = self::sanitizeCSS( $text );
+			$text = $this->sanitizeCSS( $text );
 		}
 	}
 }
