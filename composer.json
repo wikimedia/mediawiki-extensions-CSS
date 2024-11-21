@@ -1,6 +1,7 @@
 {
 	"require": {
-		"wikimedia/css-sanitizer": "^5.1.0 || ^5.2.0 || ^5.3.0"
+		"wikimedia/css-sanitizer": "^5.1.0 || ^5.2.0 || ^5.3.0",
+		"wikimedia/scoped-callback": "4.0.0"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "43.0.0",
