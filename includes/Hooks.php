@@ -119,7 +119,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	 * @param string $css
 	 * @return string
 	 */
-	public static function CSSRender( &$parser, $css ) {
+	public static function cssRender( &$parser, $css ) {
 		global $wgCSSPath, $wgStylePath, $wgCSSIdentifier;
 
 		$css = trim( $css );
@@ -175,7 +175,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 	 * @return bool true
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		$parser->setFunctionHook( 'css', [ $this, 'CSSRender' ] );
+		$parser->setFunctionHook( 'css', [ $this, 'cssRender' ] );
 		return true;
 	}
 
