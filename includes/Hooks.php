@@ -40,8 +40,7 @@ use Wikimedia\CSS\Util as CSSUtil;
 
 class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
-	/** @var StylesheetSanitizer */
-	private static $sanitizer;
+	private static ?StylesheetSanitizer $sanitizer = null;
 
 	private Config $config;
 	private HookContainer $hookContainer;
@@ -54,10 +53,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		$this->hookContainer = $hookContainer;
 	}
 
-	/**
-	 * @return StylesheetSanitizer
-	 */
-	private function getSanitizer() {
+	private function getSanitizer(): StylesheetSanitizer {
 		// This function is based on TemplateStyles's Hooks::getSanitizer():
 		// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/TemplateStyles/+/refs/heads/master/includes/Hooks.php
 		if ( !self::$sanitizer ) {
@@ -92,10 +88,8 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
 	/**
 	 * Sanitize the provided css
-	 * @param string $css
-	 * @return string
 	 */
-	private function sanitizeCSS( $css ) {
+	private function sanitizeCSS( string $css ): string {
 		// Errors are reported vaguely since the previous implementation was also vague, and since doing
 		// so could help avoid an amplification DoS (T368594#10146978). This can be revisited though.
 		// This also fails silently rather than loudly, supposedly partly for consistency with the former
@@ -126,12 +120,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		return $css;
 	}
 
-	/**
-	 * @param Parser &$parser
-	 * @param string $css
-	 * @return string
-	 */
-	public function cssRender( &$parser, $css ) {
+	public function cssRender( Parser $parser, string $css ): string {
 		$css = trim( $css );
 		if ( $css === '' ) {
 			return '';
