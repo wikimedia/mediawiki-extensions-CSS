@@ -23,7 +23,11 @@ class HooksTest extends MediaWikiUnitTestCase {
 		$title = $this->createMock( Title::class );
 		$title->method( 'exists' )->willReturn( $exists );
 		$title->method( 'getLocalURL' )
-			->with( 'action=raw&ctype=text/css&css-extension=1' )
+			->with( [
+				'action' => 'raw',
+				'ctype' => 'text/css',
+				'css-extension' => '1',
+			] )
 			->willReturn( '/w/index.php?title=MyStyles.css&action=raw&ctype=text%2Fcss&css-extension=1' );
 
 		$titleFactory = $this->createMock( TitleFactory::class );

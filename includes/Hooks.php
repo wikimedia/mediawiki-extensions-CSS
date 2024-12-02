@@ -134,12 +134,15 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		}
 		$title = $this->titleFactory->newFromText( $css );
 		$identifier = $this->config->get( 'CSSIdentifier' );
-		$rawProtection = "$identifier=1";
+		$rawProtection = [ $identifier => '1' ];
 		$headItem = '<!-- Begin Extension:CSS -->';
 
-		if ( is_object( $title ) && $title->exists() ) {
+		if ( $title && $title->exists() ) {
 			# Article actually in the db
-			$params = "action=raw&ctype=text/css&$rawProtection";
+			$params = [
+				'action' => 'raw',
+				'ctype' => 'text/css',
+			] + $rawProtection;
 			$url = $title->getLocalURL( $params );
 			$headItem .= Html::linkedStyle( $url );
 		} elseif ( $css[0] === '/' ) {
