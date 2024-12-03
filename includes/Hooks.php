@@ -23,10 +23,10 @@ use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\RawPageViewBeforeOutputHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
-use MediaWiki\Title\Title;
 use MediaWiki\Utils\UrlUtils;
 use Parser;
 use RawAction;
+use TitleFactory;
 use Wikimedia\CSS\Parser\Parser as CSSParser;
 use Wikimedia\CSS\Sanitizer\FontFaceAtRuleSanitizer;
 use Wikimedia\CSS\Sanitizer\KeyframesAtRuleSanitizer;
@@ -45,15 +45,18 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
 	private Config $config;
 	private HookContainer $hookContainer;
+	private TitleFactory $titleFactory;
 	private UrlUtils $urlUtils;
 
 	public function __construct(
 		Config $config,
 		HookContainer $hookContainer,
+		TitleFactory $titleFactory,
 		UrlUtils $urlUtils
 	) {
 		$this->config = $config;
 		$this->hookContainer = $hookContainer;
+		$this->titleFactory = $titleFactory;
 		$this->urlUtils = $urlUtils;
 	}
 
@@ -129,7 +132,7 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		if ( $css === '' ) {
 			return '';
 		}
-		$title = Title::newFromText( $css );
+		$title = $this->titleFactory->newFromText( $css );
 		$identifier = $this->config->get( 'CSSIdentifier' );
 		$rawProtection = "$identifier=1";
 		$headItem = '<!-- Begin Extension:CSS -->';

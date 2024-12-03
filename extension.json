@@ -30,6 +30,7 @@
 			"services": [
 				"MainConfig",
 				"HookContainer",
+				"TitleFactory",
 				"UrlUtils"
 			]
 		}
