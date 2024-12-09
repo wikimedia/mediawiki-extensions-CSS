@@ -1,0 +1,54 @@
+!! options
+version=2
+parsoid-compatible=wt2html
+!! end
+
+!! article
+MyStyles.css
+!! text
+body {
+  background: green;
+}
+!! endarticle
+
+!! test
+Relative path CSS file
+!! wikitext
+{{#css:MyStyles.css}}
+!! html/php
+!! html/parsoid
+<span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#css:MyStyles.css","function":"css"},"params":{},"i":0}}]}'></span>
+!! end
+
+!! test
+Relative path CSS file to not existing title
+!! wikitext
+{{#css:Not-Existing-Styles.css}}
+!! html/php
+!! html/parsoid
+<span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#css:Not-Existing-Styles.css","function":"css"},"params":{},"i":0}}]}'></span>
+!! end
+
+!! test
+Absolute path CSS file
+!! wikitext
+{{#css:/skins/MyStyles.css}}
+!! html/php
+!! html/parsoid
+<span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#css:/skins/MyStyles.css","function":"css"},"params":{},"i":0}}]}'></span>
+!! end
+
+!! test
+Inline CSS
+!! wikitext
+{{#css:
+  body {
+    background: yellow;
+    font-size: 20pt;
+    color: red;
+  }
+}}
+!! html/php
+!! html/parsoid
+<span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#css:\n  body {\n    background: yellow;\n    font-size: 20pt;\n    color: red;\n  }\n","function":"css"},"params":{},"i":0}}]}'></span>
+!! end
