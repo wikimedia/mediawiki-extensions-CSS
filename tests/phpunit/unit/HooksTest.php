@@ -5,11 +5,11 @@ namespace MediaWiki\Extension\CSS\Tests\Unit;
 use HashConfig;
 use MediaWiki\Extension\CSS\Hooks;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Title\Title;
 use MediaWiki\Utils\UrlUtils;
 use MediaWikiUnitTestCase;
 use Parser;
 use ParserOutput;
-use Title;
 use TitleFactory;
 
 /**
