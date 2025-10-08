@@ -151,14 +151,16 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 			$base = $this->config->get( 'CSSPath' ) === false ?
 				$this->config->get( MainConfigNames::StylePath ) :
 				$this->config->get( 'CSSPath' );
-			// The replacement for \ to / is to workaround a path traversal,
-			// per T369486.
+			// The URL decoding and replacement for \ to / are to workaround a
+			// path traversal vulnerability (see T369486 and T401526).
 			// TODO: Implement a proper URL parser. There may be more niche URL
 			// shenanigans one could get up to that MediaWiki's parser does not
 			// handle, but which the browser does. The most surefire way to
 			// guarantee that no tomfoolery happens is to 100% replicate what
 			// the browser does and not only like 90% of it.
-			$path = str_replace( '\\', '/', $css );
+			$path = str_ireplace( '%2f', '/', $css );
+			$path = str_ireplace( '%5c', '\\', $path );
+			$path = str_replace( '\\', '/', $path );
 			$url = wfAppendQuery( $base . $path, $rawProtection );
 
 			# Verify the expanded URL is still using the base URL
