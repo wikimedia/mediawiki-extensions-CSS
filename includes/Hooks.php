@@ -17,17 +17,17 @@
 
 namespace MediaWiki\Extension\CSS;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\CSS\Hooks\HookRunner;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\RawPageViewBeforeOutputHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\Utils\UrlUtils;
-use Parser;
 use RawAction;
-use TitleFactory;
 use Wikimedia\CSS\Parser\Parser as CSSParser;
 use Wikimedia\CSS\Sanitizer\FontFaceAtRuleSanitizer;
 use Wikimedia\CSS\Sanitizer\KeyframesAtRuleSanitizer;

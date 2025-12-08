@@ -2,15 +2,15 @@
 
 namespace MediaWiki\Extension\CSS\Tests\Unit;
 
-use HashConfig;
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\CSS\Hooks;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\Utils\UrlUtils;
 use MediaWikiUnitTestCase;
-use Parser;
-use ParserOutput;
-use TitleFactory;
 
 /**
  * @covers \MediaWiki\Extension\CSS\Hooks

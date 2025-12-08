@@ -3,9 +3,9 @@
 namespace MediaWiki\Extension\CSS\Tests\Integration;
 
 use MediaWiki\Extension\CSS\Hooks;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\ParserOutput;
 use MediaWikiIntegrationTestCase;
-use Parser;
-use ParserOutput;
 
 /**
  * @covers \MediaWiki\Extension\CSS\Hooks
