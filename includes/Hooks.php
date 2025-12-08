@@ -44,21 +44,12 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 
 	private static ?StylesheetSanitizer $sanitizer = null;
 
-	private Config $config;
-	private HookContainer $hookContainer;
-	private TitleFactory $titleFactory;
-	private UrlUtils $urlUtils;
-
 	public function __construct(
-		Config $config,
-		HookContainer $hookContainer,
-		TitleFactory $titleFactory,
-		UrlUtils $urlUtils
+		private readonly Config $config,
+		private readonly HookContainer $hookContainer,
+		private readonly TitleFactory $titleFactory,
+		private readonly UrlUtils $urlUtils,
 	) {
-		$this->config = $config;
-		$this->hookContainer = $hookContainer;
-		$this->titleFactory = $titleFactory;
-		$this->urlUtils = $urlUtils;
 	}
 
 	private function getSanitizer(): StylesheetSanitizer {
