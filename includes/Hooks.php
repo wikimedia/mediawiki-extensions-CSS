@@ -103,10 +103,11 @@ class Hooks implements ParserFirstCallInitHook, RawPageViewBeforeOutputHook {
 		$sanitizer = $this->getSanitizer();
 		$sanitizer->clearSanitizationErrors();
 		$css = $sanitizer->sanitize( $css );
-		if ( $sanitizer->getSanitizationErrors() ) {
+		if ( !$css || $sanitizer->getSanitizationErrors() ) {
 			return '/* css-sanitizer failed to sanitize CSS */';
 		}
 
+		// @phan-suppress-next-line PhanTypeMismatchArgument False positive
 		$css = CSSUtil::stringify( $css, [ 'minify' => true ] );
 		// Sanity check copied from TemplateStyles: Ensure that $css doesn't break out the sanitizer
 		if ( preg_match( '!</style!i', $css ) ) {
