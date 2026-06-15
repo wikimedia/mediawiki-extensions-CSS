@@ -4,5 +4,5 @@
 			"Siebrand"
 		]
 	},
-	"css-desc": "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in opgegeven pagina's"
+	"css-desc": "Een parserfunctie die het mogelijk maakt om CSS-stylesheets op te nemen in specifieke pagina's"
 }
